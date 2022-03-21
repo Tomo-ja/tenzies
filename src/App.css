@@ -51,3 +51,16 @@ body {
   font-size: 20.59px;
   font-weight: 700;
 }
+.roll-btn {
+  margin: 10px auto;
+  width: 92.16px;
+  height: 35.84px;
+  background: #5035ff;
+  box-shadow: 0px 3.2px 7.68px rgba(0, 0, 0, 0.18);
+  border-radius: 3.81277px;
+  line-height: 35.84px;
+  font-family: var(--ff-primary);
+  font-weight: 700;
+  font-size: 16.384px;
+  color: #ffffff;
+}

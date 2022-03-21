@@ -16,9 +16,53 @@ function App() {
         id={number.id} 
         number={number.number} 
         held={number.held} 
+        keepNumber= {keepNumber}
       />
     )
   })
+
+  function reSetNumber (){
+    setNumbers(prevNumbers => {
+      let newnBlocks = prevNumbers.map((block) => {
+        if (block.held){
+          return {...block}
+        }else{
+          return ({
+            ...block,
+            "number": takeRandomNumber()
+          })
+        }
+      })
+      return(
+        newnBlocks
+      )
+    })
+  }
+
+  function keepNumber (event){
+    const {id} = event.target
+    setNumbers(prevNumbers => {
+      let newnBlocks = prevNumbers.map((block) => {
+        if (block.id == id){
+          console.log(block.held)
+          return (
+            {
+              ...block,
+              "held": !block.held
+            })
+        }else{
+          return {...block}
+        }
+      })
+      return(
+        newnBlocks
+      )
+    })
+  }
+
+  function takeRandomNumber (){
+    return Math.floor(Math.random() * 10) + 1
+  }
 
   return (
     <div className="App">
@@ -26,6 +70,7 @@ function App() {
       <div className="block-area">
         {blockElements}
       </div>
+      <div className="roll-btn" onClick={reSetNumber}>Roll</div>
     </div>
   );
 }

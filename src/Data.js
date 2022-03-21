@@ -2,52 +2,52 @@
 export default [
 	{
 		id: 1,
-		number: "?",
+		number: 0,
 		held: false
 	},
 	{
 		id: 2,
-		number: "?",
+		number: 0,
 		held: false
 	},
 	{
 		id: 3,
-		number: "?",
+		number: 0,
 		held: false
 	},
 	{
 		id: 4,
-		number: "?",
+		number: 0,
 		held: false
 	},
 	{
 		id: 5,
-		number: "?",
+		number: 0,
 		held: false
 	},
 	{
 		id: 6,
-		number: "?",
+		number: 0,
 		held: false
 	},
 	{
 		id: 7,
-		number: "?",
+		number: 0,
 		held: false
 	},
 	{
 		id: 8,
-		number: "?",
+		number: 0,
 		held: false
 	},
 	{
 		id: 9,
-		number: "?",
+		number: 0,
 		held: false
 	},
 	{
 		id: 10,
-		number: "?",
+		number: 0,
 		held: false
 	},
 ]
