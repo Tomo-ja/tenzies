@@ -44,11 +44,10 @@ function App() {
     setNumbers(prevNumbers => {
       let newnBlocks = prevNumbers.map((block) => {
         if (block.id == id){
-          console.log(block.held)
           return (
             {
               ...block,
-              "held": !block.held
+              "held": !block.held,
             })
         }else{
           return {...block}
@@ -59,6 +58,7 @@ function App() {
       )
     })
   }
+
 
   function takeRandomNumber (){
     return Math.floor(Math.random() * 10) + 1
