@@ -8,6 +8,17 @@ import './App.css';
 function App() {
 
   const [numbers, setNumbers] = React.useState(NumbersData)
+  const [tenzies, setTenzies] = React.useState(false)
+
+  React.useEffect(()=>{
+    const allHeld = numbers.every(number => number.held)
+    const exampleNum = numbers[0].number
+    const allSameNumber = numbers.every(number => number.number == exampleNum)
+
+    if(allHeld && allSameNumber){
+      setTenzies(true)
+    }
+  }, [numbers])
 
   const blockElements = numbers.map(number => {
     return(
@@ -70,7 +81,7 @@ function App() {
       <div className="block-area">
         {blockElements}
       </div>
-      <div className="roll-btn" onClick={reSetNumber}>Roll</div>
+      <div className="roll-btn" onClick={reSetNumber}>{tenzies? "Play again": "Roll"}</div>
     </div>
   );
 }
