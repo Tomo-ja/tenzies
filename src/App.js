@@ -1,8 +1,8 @@
 import React from 'react';
+import Confetti from 'react-confetti';
 import Instruction from './components/Instruction';
 import NumbersData from './Data'
 import Block from './components/Block';
-
 import './App.css';
 
 function App() {
@@ -77,6 +77,7 @@ function App() {
 
   return (
     <div className="App">
+      {tenzies && <Confetti />}
       <Instruction />
       <div className="block-area">
         {blockElements}
